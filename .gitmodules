@@ -1,0 +1,6 @@
+[submodule "Nft-Pay-per-view/lib/forge-std"]
+	path = Nft-Pay-per-view/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Nft-Pay-per-view/lib/openzeppelin-contracts"]
+	path = Nft-Pay-per-view/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
