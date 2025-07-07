@@ -767,6 +767,11 @@ function ViewContent({ navigateTo }) { // Receive navigateTo as a prop
 
         try {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
+			const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        	if (accounts.length === 0) {
+            	setStatusMessage('Please connect your MetaMask account to proceed.');
+            	return;
+        	}
             const signer = provider.getSigner();
             const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
 

@@ -800,6 +800,11 @@ function Mint() {
             // 4. Interact with the smart contract
             setStatusMessage('Connecting to wallet and minting NFT...');
             const provider = new ethers.providers.Web3Provider(window.ethereum);
+			const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        	if (accounts.length === 0) {
+            	setStatusMessage('Please connect your MetaMask account to proceed.');
+            	return;
+        	}
             const signer = provider.getSigner();
 
             // Convert contentId string to bytes32
