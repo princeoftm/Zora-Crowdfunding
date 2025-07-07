@@ -884,10 +884,7 @@ function ViewContent({ navigateTo }) { // Receive navigateTo as a prop
                         );
                     })}
                 </div>
-                <p className="mt-8 text-center text-sm text-gray-500">
-                    *Note: Payment status is session-based. For persistent payment tracking across sessions or users,
-                    the smart contract would need to store user payment records, or a backend indexer would be required.
-                </p>
+
             </div>
         </div>
     );
